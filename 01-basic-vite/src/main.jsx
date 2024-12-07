@@ -1,26 +1,42 @@
+import React from 'react'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
+// using user defined object but with entire html code
 const reactElement = (
  <a href="https://google.com" target='-blank'>Click here</a>
 )
 
-createRoot(document.getElementById('root')).render(
- 
-  reactElement 
-
+// using react method
+const anotherElement = React.createElement(
+        'a',
+        {href : 'https://github.com/codeByRahulShelake/learn-react'},
+        'My repository'
 )
 
 /*
 createRoot(document.getElementById('root')).render(
  
-  App()
+  reactElement    // user defined object
+
+)
+  */
+
+/*
+createRoot(document.getElementById('root')).render(
+ 
+  App()  // we can call function like this but it is not a good practice
 )
 
 createRoot(document.getElementById('root')).render(
  
-  <App />
+  <App />  // default 
 )
   */
 
+createRoot(document.getElementById('root')).render(
+ 
+  anotherElement  // using react mehtod
+
+)
