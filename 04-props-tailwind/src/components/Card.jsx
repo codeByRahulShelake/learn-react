@@ -1,7 +1,6 @@
 import React from "react";
 
 // function Card(props)
-
 function Card({userName = 'Unknown'})
 {
     return(
